@@ -13,6 +13,6 @@ class Product
 }
 
 $product = new Product();
-print $product->priceAsCurrency(200) . PHP_EOL;
+print $product->priceAsCurrency(currencySymbol:'E') . PHP_EOL;
 
 ?>
