@@ -5,13 +5,10 @@ use Product as GlobalProduct;
 
 class Product
 {
-   public $name;
-   public $price;
-
-   public function __construct($name = 'Roger', $price = 40)
+  
+   public function __construct(public $name = "Roger", public $price = 100)
    {
-      $this->name = $name;
-      $this->price = $price;
+     
    }
 
    public function priceAsCurrency($divisor = 1, $currencySymbol = '$')
