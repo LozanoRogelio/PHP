@@ -3,21 +3,21 @@
 class Product
 {
    public $name = 'soap';
-   public $price = 5;
+   public $price;
+
+   public function priceAsCurrency()
+   {
+      $priceAsCurrency = $this->price / 100;
+      return $priceAsCurrency;
+   }
 }
+$soapObject1 = new Product();
+$soapObject1->price = 550;
+$soapObject2 = new Product();
+$soapObject2->price = 650;
+$priceAsCurrency = $soapObject1->priceAsCurrency();
 
 
 
-$soapObject = new Product();
-print $soapObject->name . "<br>";
-print $soapObject->price . "<br>";
-$soapObject->name = 'toothpaste';
-$soapObject->price = 2;
-print $soapObject->name . "<br>";
-print $soapObject->price . "<br>";
-// Creating class
-// $product = new Product();
-// $anotherProduct = new Product();
-// var_dump($product);
-// var_dump($anotherProduct);
+
 ?>
